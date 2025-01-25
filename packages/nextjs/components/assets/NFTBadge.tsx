@@ -80,29 +80,46 @@ export default function ExamplePage({ imageURI }: ExamplePageProps) {
 
   return (
     <div
-      className="card"
       ref={cardRef}
       style={{
-        backgroundImage: `url(${imageURI})`, // Dynamically set the background image
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        margin: "50px auto",
-        padding: "20px",
+        fontWeight: "bold",
+        padding: "1em",
+        textAlign: "right",
+        color: "#181a1a",
         width: "300px",
-        height: "300px",
-        textAlign: "center",
+        height: "400px",
+        boxShadow: "0 1px 5px #00000099",
+        borderRadius: "10px",
+        backgroundImage: `url(${imageURI})`,
+        backgroundSize: "cover",
         position: "relative",
+        transitionDuration: "300ms",
+        transitionProperty: "transform, box-shadow",
+        transitionTimingFunction: "ease-out",
+        transform: "rotate3d(0)",
+      }}
+      onMouseEnter={() => {
+        if (cardRef.current) {
+          cardRef.current.style.boxShadow = "0 5px 20px 5px #00000044";
+          cardRef.current.style.transitionDuration = "150ms";
+        }
+      }}
+      onMouseLeave={() => {
+        if (cardRef.current) {
+          cardRef.current.style.boxShadow = "0 1px 5px #00000099";
+          cardRef.current.style.transitionDuration = "300ms";
+        }
       }}
     >
       <div
         className="glow"
         style={{
           position: "absolute",
-          top: 0,
-          left: 0,
           width: "100%",
           height: "100%",
-          pointerEvents: "none",
+          left: "0",
+          top: "0",
+          backgroundImage: "radial-gradient(circle at 50% -20%, #ffffff22, #0000000f)",
         }}
       />
     </div>
