@@ -1,0 +1,15 @@
+
+🔹 REGISTRAZIONE - Status Code: 400
+Response JSON: {'username': ['A user with that username already exists.']}
+
+🔹 LOGIN - Status Code: 200
+Response JSON: {'message': 'Login effettuato con successo', 'csrf_token': 'Ly3eKyRurI4nG6NPR5NmV584T41CSINUPAEvh5Gj46YBq1WDL6LDSyHeY1j61DOh'}
+
+🔹 DATI UTENTE - Status Code: 200
+Response JSON: {'id': 2, 'username': 'newuser', 'email': 'newuser@example.com', 'first_name': 'John', 'last_name': 'Doe', 'address': None, 'imgURI': None, 'creationDate': '2025-01-26T04:58:34.334386Z', 'csrf_token': 'CfY9PIgBTUOILB248kC7iFo1KjZTb7eRGhzqmf5qwiIWvwbS2lAof8XbPghnk2fe'}
+
+🔹 MODIFICA DATI UTENTE - Status Code: 200
+Response JSON: {'message': 'Profilo aggiornato con successo!'}
+
+🔹 LOGOUT - Status Code: 200
+Response JSON: {'message': 'Logout effettuato con successo'}
