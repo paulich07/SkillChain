@@ -19,6 +19,8 @@
       "~~/*": ["./*"],
       "@/components/*": ["components/*"],
       "@/assets/*": ["components/assets/*"],
+      "@/types/*": ["types/*"]
+
     },
     "plugins": [
       {
